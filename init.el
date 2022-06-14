@@ -8,7 +8,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(dashboard treemacs-all-the-icons treemacs-icons-dired treemacs-magit treemacs-projectile all-the-icons dap-mode which-key lsp-ui lsp-mode company-tabnine company flycheck apheleia yasnippet-snippets yasnippet undo-fu-session rainbow-delimiters projectile magit doom-themes)))
+   '(org-jira dashboard treemacs-all-the-icons treemacs-icons-dired treemacs-magit treemacs-projectile all-the-icons dap-mode which-key lsp-ui lsp-mode company-tabnine company flycheck apheleia yasnippet-snippets yasnippet undo-fu-session rainbow-delimiters projectile magit doom-themes)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -152,3 +152,9 @@
 (dashboard-setup-startup-hook)
 (setq dashboard-startup-banner 'logo)
 (setq dashboard-center-content t)
+
+;; Org-jira for jira in emacs
+(unless (package-installed-p 'org-jira)
+  (package-install 'org-jira))
+(setq jiralib-url "https://vutiliti.atlassian.net")
+
