@@ -16,6 +16,10 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; Grab doom themes
+(unless (package-installed-p 'doom-themes)
+  (package-install 'doom-themes))
+
 (load-theme 'doom-dracula t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
